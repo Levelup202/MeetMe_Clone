@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meetme">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeetMe">
+        <activity android:name=".MeActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LocalActivity" />
+        <activity android:name=".Matches_Match" />
+        <activity android:name=".Admire_Match" />
+        <activity android:name=".MatchActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".LeaderBoard_Live" />
+        <activity android:name=".Favourite_Live" />
+        <activity android:name=".New_Live" />
+        <activity android:name=".Date_Live" />
+        <activity android:name=".NearBy_Live" />
+        <activity android:name=".LiveActivity" />
+        <activity android:name=".LocalsFilterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
