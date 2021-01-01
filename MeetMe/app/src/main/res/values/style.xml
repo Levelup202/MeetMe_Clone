@@ -160,7 +160,7 @@
     </style>
 
     <style name="signUpActivity_editText_style">
-        <item name="android:layout_width">@dimen/dp_300</item>
+        <item name="android:layout_width">@dimen/dp_250</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/sp_20</item>
         <item name="android:background">@drawable/edit_text_rectangle_bg</item>

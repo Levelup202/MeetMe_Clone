@@ -78,5 +78,9 @@
     <string name="gender_signUp">GENDER</string>
     <string name="location_signUp">LOCATION</string>
     <string name="sign_up_free">Sign Up Free!</string>
+    <string name="notify">This is where we will notify you</string>
+    <string name="stuff">when stuff happens</string>
+    <string name="new_people">Meet new people</string>
+    <string name="see_live">See who is live</string>
 
 </resources>
