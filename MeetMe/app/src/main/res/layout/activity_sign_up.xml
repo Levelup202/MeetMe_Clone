@@ -38,13 +38,10 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_facebook"
                 android:gravity="center"
-                android:paddingTop="@dimen/dp_10"
-                android:paddingBottom="@dimen/dp_10"
-                android:paddingStart="@dimen/dp_20"
-                android:paddingEnd="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
                 android:text="@string/log_in_with_facebook"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="@dimen/sp_15" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -64,7 +61,7 @@
                 android:padding="@dimen/dp_10"
                 android:text="Already a Member"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp_17" />
+                android:textSize="@dimen/sp_15" />
         </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
