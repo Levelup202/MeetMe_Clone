@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LiveActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/tvLocals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/locals"
+                app:drawableTopCompat="@drawable/ic_locals" />
+
+            <TextView
+                android:id="@+id/tvLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/live"
+                android:textColor="@color/custom_faded_purple"
+                app:drawableTopCompat="@drawable/ic_live_mark" />
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/chat"
+                app:drawableTopCompat="@drawable/ic_chat" />
+
+            <TextView
+                android:id="@+id/tvMatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/match"
+                app:drawableTopCompat="@drawable/ic_match" />
+
+            <TextView
+                android:id="@+id/tvMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/me"
+                app:drawableTopCompat="@drawable/ic_me" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivSearch_live"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/custom_faded_purple"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search_live" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsvTop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/custom_faded_purple"
+        android:paddingEnd="@dimen/dp_60"
+        app:layout_constraintStart_toEndOf="@id/ivSearch_live"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTrending_live"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_7"
+                android:paddingEnd="@dimen/dp_7"
+                android:text="@string/trending_live"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+
+            <TextView
+                android:id="@+id/tvNearby_live"
+                style="@style/liveActivity_top_textView_layout_style"
+                android:text="@string/nearby_live" />
+
+            <TextView
+                android:id="@+id/tvDate_live"
+                style="@style/liveActivity_top_textView_layout_style"
+                android:text="@string/date_live" />
+
+            <TextView
+                android:id="@+id/tvNew_live"
+                style="@style/liveActivity_top_textView_layout_style"
+                android:text="@string/new_live" />
+
+            <TextView
+                android:id="@+id/tvFavourites_live"
+                style="@style/liveActivity_top_textView_layout_style"
+                android:text="@string/favourites_live" />
+
+            <TextView
+                android:id="@+id/tvLeaderBoard_live"
+                style="@style/liveActivity_top_textView_layout_style"
+                android:text="@string/leaderboads_live" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hsvTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_120">
+
+            <ImageView
+                android:id="@+id/ivLiveTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:scaleType="centerCrop"
+                android:src="@drawable/live_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:gravity="center"
+                android:padding="@dimen/dp_20"
+                android:text="@string/just_think_that_whatever_you_are_thinking_is_written_here"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvOne_Trending_Live"
+                style="@style/liveActivity_leftCardView_style"
+                app:layout_constraintEnd_toStartOf="@id/cvTwo_Trending_Live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivLiveTop">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/one_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/derek_46_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="890" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTwo_Trending_Live"
+                style="@style/liveActivity_rightCardView_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvOne_Trending_Live"
+                app:layout_constraintTop_toBottomOf="@id/ivLiveTop">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/two_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/miss_marry_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="2.1k" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvThree_Trending_Live"
+                style="@style/liveActivity_leftCardView_style"
+                app:layout_constraintEnd_toStartOf="@id/cvFour_Trending_Live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvOne_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/three_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/waiting_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.2k" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFour_Trending_Live"
+                style="@style/liveActivity_rightCardView_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvThree_Trending_Live"
+                app:layout_constraintTop_toBottomOf="@id/cvTwo_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/four_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/sitting_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="990" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFive_Trending_Live"
+                style="@style/liveActivity_leftCardView_style"
+                app:layout_constraintEnd_toStartOf="@id/cvSix_Trending_Live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvThree_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/five_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/enjoying_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.8k" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSix_Trending_Live"
+                style="@style/liveActivity_rightCardView_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvFive_Trending_Live"
+                app:layout_constraintTop_toBottomOf="@id/cvFour_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/six_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/watching_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.6k" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSeven_Trending_Live"
+                style="@style/liveActivity_leftCardView_style"
+                app:layout_constraintEnd_toStartOf="@id/cvEight_Trending_Live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvFive_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/seven_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/my_neck_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="910" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvEight_Trending_Live"
+                style="@style/liveActivity_rightCardView_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvSeven_Trending_Live"
+                app:layout_constraintTop_toBottomOf="@id/cvSix_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/eight_live" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="2.5k" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/my_suit_live_name" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvNine_Trending_Live"
+                style="@style/liveActivity_leftCardView_style"
+                app:layout_constraintEnd_toStartOf="@id/cvTen_Trending_Live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvSeven_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/nine_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/moon_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="3.3k" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTen_Trending_Live"
+                style="@style/liveActivity_rightCardView_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvNine_Trending_Live"
+                app:layout_constraintTop_toBottomOf="@id/cvEight_Trending_Live">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/ten_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/smiley_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="890" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGoLive_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:cardBackgroundColor="@color/goLive_live_button"
+        app:cardCornerRadius="@dimen/dp_30"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/material_on_background_disabled"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="GO LIVE!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFilter_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:cardCornerRadius="@dimen/dp_50"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvGoLive_live">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_settings_live" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

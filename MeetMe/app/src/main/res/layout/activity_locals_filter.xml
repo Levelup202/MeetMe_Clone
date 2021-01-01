@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LocalsFilterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/custom_faded_purple"
+                android:paddingStart="@dimen/dp_70"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="@string/filters_localFilters"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="@id/tvFilters"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                app:layout_constraintBottom_toBottomOf="@id/tvFilters"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/localFilters_options"
+                android:id="@+id/tvBasic"
+                android:text="@string/basic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFilters" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                style="@style/filters_editText_style"
+                android:hint="@string/location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBasic" />
+
+            <EditText
+                android:id="@+id/etGender"
+                style="@style/filters_editText_style"
+                android:hint="@string/gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation" />
+
+            <EditText
+                android:id="@+id/etAge"
+                style="@style/filters_editText_style"
+                android:hint="@string/age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etGender" />
+
+            <EditText
+                android:id="@+id/etOrientation"
+                style="@style/filters_editText_style"
+                android:hint="@string/orientation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+            <EditText
+                android:id="@+id/etCovidDatingPreference"
+                style="@style/filters_editText_style"
+                android:hint="@string/covid_dating_preference"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etOrientation" />
+
+            <EditText
+                android:id="@+id/etShowOnlineMembersOnly"
+                style="@style/filters_editText_style"
+                android:text="@string/show_online_members_only"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCovidDatingPreference" />
+
+            <TextView
+                android:id="@+id/tvAdvanced_activityFilters"
+                style="@style/localFilters_options"
+                android:text="@string/advanced_localFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etShowOnlineMembersOnly" />
+
+            <EditText
+                android:id="@+id/etTags"
+                style="@style/filters_editText_style"
+                android:hint="@string/location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAdvanced_activityFilters" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                style="@style/filters_editText_style"
+                android:hint="@string/gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTags" />
+
+            <EditText
+                android:id="@+id/etBodyType"
+                style="@style/filters_editText_style"
+                android:hint="@string/age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etHeight" />
+
+            <EditText
+                android:id="@+id/etReligion"
+                style="@style/filters_editText_style"
+                android:hint="@string/orientation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etBodyType" />
+
+            <EditText
+                android:id="@+id/etEthnicity"
+                style="@style/filters_editText_style"
+                android:hint="@string/covid_dating_preference"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etReligion" />
+
+            <EditText
+                android:id="@+id/etHasChildren"
+                style="@style/filters_editText_style"
+                android:text="@string/show_online_members_only"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEthnicity" />
+
+            <EditText
+                android:id="@+id/etEducation"
+                style="@style/filters_editText_style"
+                android:hint="@string/covid_dating_preference"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etHasChildren" />
+
+            <EditText
+                android:id="@+id/etSmoking"
+                style="@style/filters_editText_style"
+                android:text="@string/smoking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEducation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
