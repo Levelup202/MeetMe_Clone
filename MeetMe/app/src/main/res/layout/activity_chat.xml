@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/tvLocals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/locals"
+                app:drawableTopCompat="@drawable/ic_locals" />
+
+            <TextView
+                android:id="@+id/tvLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/live"
+                app:drawableTopCompat="@drawable/ic_live" />
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/chat"
+                android:textColor="@color/custom_faded_purple"
+                app:drawableTopCompat="@drawable/ic_chat_mark" />
+
+            <TextView
+                android:id="@+id/tvMatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/match"
+                app:drawableTopCompat="@drawable/ic_match" />
+
+            <TextView
+                android:id="@+id/tvMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_3"
+                android:gravity="center"
+                android:text="@string/me"
+                app:drawableTopCompat="@drawable/ic_me" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvLiveAndTrending_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="@string/live_trending"
+        android:textColor="@color/custom_faded_green"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLiveAndTrending_chat">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvOne_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/ten_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/smiley_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="890" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTow_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/two_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/enjoying_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.1k" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvThree_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/three_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/sitting_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="120" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFour_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/four_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/watching_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.1k" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFive_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/five_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/waiting_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="890" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSix_Trending_Chat"
+                style="@style/chatActivity_imageCardView_style">
+
+                <ImageView
+                    style="@style/liveActivity_image_style"
+                    android:src="@drawable/six_live" />
+
+                <TextView
+                    style="@style/liveActivity_name_textView_style"
+                    android:text="@string/miss_marry_live_name" />
+
+                <TextView
+                    style="@style/liveActivity_view_style"
+                    android:text="1.1k" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="@string/my_chats_chat"
+        android:textColor="@color/custom_faded_green"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_chat" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_50"
+        app:layout_constraintBottom_toTopOf="@+id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/ic_speech_bubble_chat" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="You don't have any chats right now"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/coin_green"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:layout_constraintBottom_toTopOf="@+id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/btnFindChatPartner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/material_on_background_disabled"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:text="@string/find_a_chat_partner"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
