@@ -117,7 +117,7 @@
             <EditText
                 android:id="@+id/etTags"
                 style="@style/filters_editText_style"
-                android:hint="@string/location"
+                android:hint="@string/tags"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAdvanced_activityFilters" />
@@ -125,7 +125,7 @@
             <EditText
                 android:id="@+id/etHeight"
                 style="@style/filters_editText_style"
-                android:hint="@string/gender"
+                android:hint="@string/height"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etTags" />
@@ -133,7 +133,7 @@
             <EditText
                 android:id="@+id/etBodyType"
                 style="@style/filters_editText_style"
-                android:hint="@string/age"
+                android:hint="@string/body_type"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etHeight" />
@@ -141,7 +141,7 @@
             <EditText
                 android:id="@+id/etReligion"
                 style="@style/filters_editText_style"
-                android:hint="@string/orientation"
+                android:hint="@string/religion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etBodyType" />
@@ -149,7 +149,7 @@
             <EditText
                 android:id="@+id/etEthnicity"
                 style="@style/filters_editText_style"
-                android:hint="@string/covid_dating_preference"
+                android:hint="@string/ethnicity"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etReligion" />
@@ -157,7 +157,7 @@
             <EditText
                 android:id="@+id/etHasChildren"
                 style="@style/filters_editText_style"
-                android:text="@string/show_online_members_only"
+                android:text="@string/has_children"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etEthnicity" />
@@ -165,7 +165,7 @@
             <EditText
                 android:id="@+id/etEducation"
                 style="@style/filters_editText_style"
-                android:hint="@string/covid_dating_preference"
+                android:hint="@string/education"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etHasChildren" />

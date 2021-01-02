@@ -82,5 +82,12 @@
     <string name="stuff">when stuff happens</string>
     <string name="new_people">Meet new people</string>
     <string name="see_live">See who is live</string>
+    <string name="tags">Tags</string>
+    <string name="height">Height</string>
+    <string name="body_type">Body type</string>
+    <string name="religion">Religion</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="has_children">Has children</string>
+    <string name="education">Education</string>
 
 </resources>

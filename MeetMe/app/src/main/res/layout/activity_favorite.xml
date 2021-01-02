@@ -19,16 +19,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/coin_green"
-        android:text="@string/see_live"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-
         android:paddingStart="@dimen/dp_20"
         android:paddingEnd="@dimen/dp_20"
+        android:text="@string/see_live"
+
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.661" />
 </androidx.constraintlayout.widget.ConstraintLayout>

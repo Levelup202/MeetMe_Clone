@@ -75,6 +75,7 @@
 
         <EditText
             android:id="@+id/etName_signup"
+            android:inputType="textPersonName"
             style="@style/signUpActivity_editText_style" />
     </androidx.cardview.widget.CardView>
 
@@ -95,6 +96,7 @@
 
         <EditText
             android:id="@+id/etEmail_signUp"
+            android:inputType="textEmailAddress"
             style="@style/signUpActivity_editText_style" />
     </androidx.cardview.widget.CardView>
 
@@ -135,6 +137,7 @@
 
         <EditText
             android:id="@+id/etBirthday_sighUp"
+            android:inputType="datetime"
             style="@style/signUpActivity_editText_style" />
     </androidx.cardview.widget.CardView>
 
@@ -175,6 +178,7 @@
 
         <EditText
             android:id="@+id/etLocation_signUp"
+            android:inputType="textPostalAddress"
             style="@style/signUpActivity_editText_style" />
     </androidx.cardview.widget.CardView>
 
