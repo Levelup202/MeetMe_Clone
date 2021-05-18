@@ -31,7 +31,8 @@ App Screenshots :
 This project is designed only for learning purpose with the guidance of Masai School mentors.
 
 This Project is made in Java with Android Studio IDE.
-Dependency Used 
+
+Dependencies Used :
 - [Circular View](https://github.com/hdodenhof/CircleImageView) 
 - [Glide](https://github.com/bumptech/glide) 
 - All Random images available on Internet ( if any Images and Icon is not credited please email me and i will make sure to give you credit thank you :) Email prabinkumarsahu28@gmail.com )
